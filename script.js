@@ -21,5 +21,9 @@ console.log(c)
 
 {
     const c=130
-    console.log(c)
+    console.log(typeof(c))
 }
+
+
+//DATA TYPES
+ console.log(typeof(c))
