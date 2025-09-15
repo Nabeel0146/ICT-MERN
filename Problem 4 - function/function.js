@@ -15,3 +15,7 @@ let adderfunction=(c,d)=>{
 }
 
 console.log(adderfunction(20,40))
+
+
+let shortarrow=(e,f)=>e+f
+console.log(shortarrow(50,50))
