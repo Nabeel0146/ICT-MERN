@@ -11,6 +11,7 @@ console.log(a)
 {
     let b=20
     console.log(b)
+    //insiide another bracket can be used or realocated 
 }
 
 
