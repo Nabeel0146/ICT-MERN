@@ -25,4 +25,6 @@ let people = [
     }
   ];
 
-  console.log(people[0])
+  console.log(people[0].place.country);
+  people[1].age = 22;
+  console.log(people[1].age);
