@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <center>
+    
     <div className="app" >
       <header>
         <h1>Todo App</h1>
@@ -48,7 +48,7 @@ function App() {
         <small>Built with ❤️ — edit <code>src/App.js</code> to change behavior</small>
       </footer>
     </div>
-</center>
+
   );
 }
 
