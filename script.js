@@ -1,12 +1,17 @@
 console.log("Hello, World!");
 
 //let cannot be redeclared, var can be 
-let b=+10;
+let b=10;
 
 console.log(b)
 
 var a=b+100;
 console.log(a)
+
+{
+    let b=20
+    console.log(b)
+}
 
 
 //const
