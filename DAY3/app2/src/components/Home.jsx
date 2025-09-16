@@ -1,4 +1,4 @@
-import { AppBar, Toolbar } from '@mui/material'
+import { AppBar, Table, TableCell, TableContainer, TableHead, TableRow, Toolbar } from '@mui/material'
 import React from 'react'
 
 export const Home = () => {
@@ -10,6 +10,19 @@ export const Home = () => {
         </Toolbar>
 
     </AppBar>
+
+    <TableContainer>
+        <Table>
+            <TableHead>
+                <TableRow>
+                    <TableCell>Name</TableCell>
+                    <Tablecell></Tablecell>
+                    <Tablecell></Tablecell>
+                    <Tablecell></Tablecell>
+                </TableRow>
+            </TableHead>
+        </Table>
+    </TableContainer>
 </div>
     
   )
