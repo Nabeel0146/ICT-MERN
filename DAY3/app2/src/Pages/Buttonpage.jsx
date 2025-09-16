@@ -1,9 +1,15 @@
 import { Button } from '@mui/material'
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
 
 const Buttonpage = () => {
     var [a, setname] = useState("Click A button see something!")
+
+    useEffect (() => {
+        Cname("Not CLICKED")
+    },[])
+
     const Cname = (n) => {
         setname(n)
     }
