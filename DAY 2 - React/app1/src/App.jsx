@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    
+
     <div className="app" >
       <header>
         <h1>Todo App</h1>

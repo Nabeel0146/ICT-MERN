@@ -61,3 +61,10 @@ p{
   align-items: center;
   background-color: #ffffff;
 }
+.space{
+    margin-top: 10px;
+}
+
+.statediv{
+    margin-top: 40px;
+}
