@@ -18,8 +18,9 @@ const Welcome = () => {
         <div>
             <br />
             <h1>Welcome {b}</h1>
+            <br className='space'/>
             <TextField variant='outlined' onChange={ChangeName} ></TextField>
-            <br />
+            <br className='space'/>
             <Button variant='contained' onClick={ClickChange}>Change Name</Button>
 
         </div>

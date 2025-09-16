@@ -6,6 +6,7 @@ import UserTable from '../components/UserTable';
 import Welcome from '../components/Welcome';
 
 
+
 export const Home = () => {
     return (
         <div>
@@ -15,9 +16,13 @@ export const Home = () => {
                     <Link to="/signup">
                         <Button variant="contained" size='2'>Create an Account</Button>
 
-                    </Link>
+                    </Link>&nbsp;
                     <Link to="/counterr">
                         <Button variant="contained" size='2'>Counter Page</Button>
+
+                    </Link>&nbsp;
+                    <Link to="/buttonpage">
+                        <Button variant="contained" size='2'>Button Page</Button>
 
                     </Link>
                 </Toolbar>
@@ -27,6 +32,8 @@ export const Home = () => {
             <Welcome />
             <br />
             <UserTable />
+            <br />
+            
            
 
 

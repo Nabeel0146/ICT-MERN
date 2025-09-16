@@ -8,6 +8,8 @@ import { Signup } from './components/Signup'
 import { Home } from './Pages/Home'
 import Welcome from './components/Welcome'
 import Counter from './Pages/Counter'
+import Buttonpage from './Pages/Buttonpage'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +22,9 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/welcome' element={<Welcome />} />
         <Route path='/counterr' element={<Counter />} />
-        
+        <Route path='/buttonpage' element={<Buttonpage />} />
+
+
 
       </Routes>
 
