@@ -10,7 +10,8 @@ import Welcome from '../components/Welcome';
 export const Home = () => {
     return (
         <div>
-            <AppBar sx={{ backgroundColor: "#8bdfbbff", boxShadow: "none" }}>
+            <AppBar sx={{   height:"100px",background: "linear-gradient(180deg, #3fa9e7ff, #ffffffff)", // gradient from left to right
+    boxShadow: "none"}}>
                 <Toolbar>
                     <h1 className='linkspace'>My App</h1>
                     &nbsp;
@@ -37,6 +38,10 @@ export const Home = () => {
                 </Toolbar>
             </AppBar>
             <br />
+            <div style={{  paddingTop:"30px",}}>
+                
+            </div>
+
 
             <Welcome />
             <br />
