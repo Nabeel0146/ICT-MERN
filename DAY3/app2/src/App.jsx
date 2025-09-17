@@ -9,6 +9,8 @@ import { Home } from './Pages/Home'
 import Welcome from './components/Welcome'
 import Counter from './Pages/Counter'
 import Buttonpage from './Pages/Buttonpage'
+import CardPage from './components/CardPage'
+import Productspage from './Pages/Productspage'
 
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
         <Route path='/welcome' element={<Welcome />} />
         <Route path='/counterr' element={<Counter />} />
         <Route path='/buttonpage' element={<Buttonpage />} />
+        <Route path='/cardpage' element={<CardPage />}/>
+        <Route path='/productpage' element={<Productspage />}/>
+
 
 
 

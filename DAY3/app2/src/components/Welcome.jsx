@@ -17,9 +17,9 @@ const Welcome = () => {
     return (
         <div>
             <br />
-            <h1>Welcome {b}</h1>
+            <h1 style={{ textAlign:"left"}}>Welcome {b}</h1>
             <br className='space'/>
-            <TextField variant='outlined' onChange={ChangeName} ></TextField>
+            <TextField  variant='outlined' onChange={ChangeName} ></TextField>
             <br className='space'/>
             <Button variant='contained' onClick={ClickChange}>Change Name</Button>
 

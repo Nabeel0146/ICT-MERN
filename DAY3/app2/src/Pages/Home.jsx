@@ -10,31 +10,40 @@ import Welcome from '../components/Welcome';
 export const Home = () => {
     return (
         <div>
-            <AppBar>
+            <AppBar sx={{ backgroundColor: "#8bdfbbff", boxShadow: "none" }}>
                 <Toolbar>
-                    <h1>My App</h1>
-                    <Link to="/signup">
-                        <Button variant="contained" size='2'>Create an Account</Button>
+                    <h1 className='linkspace'>My App</h1>
+                    &nbsp;
+                    <Link to="/signup" >
+                        <Button variant="text" size='2'>Create an Account</Button>
 
                     </Link>&nbsp;
                     <Link to="/counterr">
-                        <Button variant="contained" size='2'>Counter Page</Button>
+                        <Button variant="text" size='2'>Counter Page</Button>
+
+                    </Link>&nbsp;
+                    <Link to="/cardpage">
+                        <Button variant="text" size='2'>Card Page</Button>
+
+                    </Link>&nbsp;
+                    <Link to="/productpage">
+                        <Button variant="text" size='2'>Products Page</Button>
 
                     </Link>&nbsp;
                     <Link to="/buttonpage">
-                        <Button variant="contained" size='2'>Button Page</Button>
+                        <Button variant="text" size='2'>Button Page</Button>
 
                     </Link>
                 </Toolbar>
             </AppBar>
-            <br/>
+            <br />
 
             <Welcome />
             <br />
             <UserTable />
             <br />
-            
-           
+
+
 
 
         </div>
