@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Colourbar = () => {
+const Colourbar = ({ color = "#8fcabbff" }) => {
   return (
     <div
-    style={{paddingTop:"64px", paddingBottom:"20px", backgroundColor:"#8fcabbff", borderRadius:"10px"}}
-    
+      style={{
+        paddingTop: "160px",
+        paddingBottom: "20px",
+        backgroundColor: color,   
+        borderRadius: "10px"
+      }}
     ></div>
   )
 }

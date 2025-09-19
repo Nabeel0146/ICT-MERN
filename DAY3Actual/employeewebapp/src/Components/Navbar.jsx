@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div>
-      <AppBar sx={{ bgcolor: 'black' , paddingRight:"200px"}} position="fixed">
+      <AppBar sx={{ bgcolor: '#324730ff' , paddingRight:"200px"}} position="fixed">
         <Toolbar>
           <h1 className='appbarh1'>Employeez</h1>
           <Link to="/addpage" >
-            <Button variant="text" size='2'>Add Employee</Button>
+            <Button variant="text" size='2' color='primary'>Add Employee</Button>
 
           </Link>&nbsp;
           <Link to="/viewpage" >

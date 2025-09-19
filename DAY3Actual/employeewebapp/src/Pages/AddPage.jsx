@@ -1,71 +1,91 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Colourbar from '../Components/Colourbar'
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from '@mui/material'
+import axios from 'axios'
+import Navbar from '../Components/navbar'
+import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 
 const AddPage = () => {
 
-    var [name, setName]=useState("FF")
-    var [dept, setDept]=useState("FF")
-    var [salary, setSalary]=useState("FF")
+    console.log(location.state)
+    const inputHandler=(e)=>{
 
-    const [submittedName, setSubmittedName]=useState("")
-
-    const ChangeName=(e)=>{
-        setName(e.target.value)
-    }
-    const FixName=()=>{
-        setName2(name)
+        setinput({...input,[e.target.name]:e.target.value})
+        console.log(input)
     }
 
+    const handleSubmit=()=>{
+        setSubmit(input)
+        console.log(submit)
 
+        axios.post("http://localhost:3000/add",input)
+        .then((res)=>{
+            console.log(res.data)
+            console.log("Data added successfully")
+            setinput({Name:"", Dept:"", Salary:""})
+            navigate('/viewpage')
 
+        }
+    )
+    }
+
+    useEffect(() => {
+  if (location.state) {
+    setinput({
+      Name: location.state.Name || "",
+      Dept: location.state.Dept || "",
+      Salary: location.state.Salary || "",
+    });
+  }
+}, [location.state])
     
-    const ChangeDept=(e)=>{
-        setDept(e.target.value)
-    }
     
-    const ChangeSalary=(e)=>{
-        setSalary(e.target.value)
-    }
-
-    
+    var location=useLocation()
+    var navigate=useNavigate()
+    var [submit, setSubmit]=useState({})
+    var [input, setinput]=useState({Name:"", Dept:"", Salary:""})
 
 
     return (
         <div>
-            <Colourbar />
+            <Navbar/>
+            <h1 style={{paddingTop:"80px"}}></h1>
+            <Colourbar color="#acd6f3ff" /> 
             <h1 style={{ textAlign: "left", fontSize: "80px" }}>Add Employee details</h1>
             <h3
                 style={{ textAlign: "left", fontSize: "14px" }}
             >Welcome to the react new webpage, explorers find gems,aah.</h3>
             <div style={{ textAlign: "left" }}>
-                <TextField style={{ textAlign: "left" }} label="Full Name" onChange={ChangeName} ></TextField> &nbsp;
-                <TextField style={{ textAlign: "left" }} label="Department" onChange={ChangeDept}></TextField> &nbsp;
-                <TextField style={{ textAlign: "left" }} label="Salary" onChange={ChangeSalary}></TextField>
+                <TextField style={{ textAlign: "left" }}
+                 label="Full Name"
+                 name='Name'
+                 value={input.Name}
+                  onChange={inputHandler} >
+                  </TextField> &nbsp;
+
+
+                <TextField style={{ textAlign: "left" }}
+                 label="Department"
+                 name='Dept'
+                 value={input.Dept}
+                  onChange={inputHandler}>
+                    </TextField> &nbsp;
+
+
+                <TextField style={{ textAlign: "left" }}
+                 label="Salary" 
+                 name='Salary'
+                 value={input.Salary}
+                 onChange={inputHandler}>
+
+                 </TextField>
+
             </div>
             <div style={{ textAlign: "left", paddingTop:"19px"}}>
-                <Button variant='contained' onClick={FixName}>Submit</Button>
+                <Button variant='contained' onClick={handleSubmit}>Submit</Button>
 
             </div>
-            <TableContainer>
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Full Name</TableCell>
-                            <TableCell>Department</TableCell>
-                            <TableCell>Salary</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell>{name}</TableCell>
-                            <TableCell>{dept}</TableCell>
-                            <TableCell>{salary}</TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
-            </TableContainer>
-
+            
         </div>
     )
 }
